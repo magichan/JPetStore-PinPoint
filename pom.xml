@@ -199,9 +199,11 @@
                 <url>${cargo.maven.containerUrl}</url>
               </zipUrlInstaller>
             </container>
+<!--      add for pinpoint begin             -->
             <configuration>
                           <properties>
                             <cargo.jvmargs>
+<!--      need change agent path for use                              -->
                               -javaagent:C:\tool\pinpoint-workshop\pinpoint-agent\pinpoint-bootstrap-1.8.4.jar 
                               -Dpinpoint.agentId=test-agent
                               -Dpinpoint.applicationName=TESTAPP
@@ -212,6 +214,7 @@
                            
                           </properties>
             </configuration>
+<!--      add for pinpoint end             -->
             <daemon>
               <properties>
                 <cargo.daemon.url>http://localhost:18000</cargo.daemon.url>
